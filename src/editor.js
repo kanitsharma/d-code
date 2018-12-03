@@ -3,13 +3,14 @@ import Editor from 'react-monaco-editor'
 
 export default props => {
     const options = {
-        selectOnLineNumbers: true
+        selectOnLineNumbers: true,
+        fontSize: '20px'
     };
 
     return (
         <Editor
             width="100%"
-            height="97vh"
+            height="900px"
             language="javascript"
             theme="vs-dark"
             value={props.code}
