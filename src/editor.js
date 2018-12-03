@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Editor from 'react-monaco-editor'
 
 export default props => {
-    const [code, setCode] = useState('')
     const options = {
         selectOnLineNumbers: true
     };
@@ -10,12 +9,12 @@ export default props => {
     return (
         <Editor
             width="100%"
-            height="800px"
+            height="97vh"
             language="javascript"
             theme="vs-dark"
-            value={code}
+            value={props.code}
             options={options}
-            onChange={val => setCode(val)}
+            onChange={val => props.updateFn(val)}
         />
     );
 }
